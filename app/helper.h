@@ -7,7 +7,7 @@
 #include <QDebug>
 using namespace std;
 
-typedef QVector<QVector<int>> Puzzle;
+typedef QVector<QVector<int> > Puzzle;
 typedef QList< int > Values;
 
 
