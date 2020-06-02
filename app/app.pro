@@ -23,7 +23,7 @@ SOURCES += \
     getRowValues.cpp
 
 HEADERS += \
-    helper.h 
+    helper.h
 
 # gcov
 QMAKE_CFLAGS += -fprofile-arcs -ftest-coverage
