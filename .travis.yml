@@ -1,7 +1,10 @@
-dist: trusty
+language: cpp
+dist: bionic
+compiler: gcc
 
-language:
- - cpp
+before_install:
+  - pip install --user cpp-coveralls
+  - sudo apt-get install qt5-default -y
  
 addons:
  sonarcloud:

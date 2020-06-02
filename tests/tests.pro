@@ -8,6 +8,8 @@ CONFIG += thread
 CONFIG -= qt
 CONFIG += c++11 qt
 
+QMAKE_CXXFLAGS += -Wall -Wextra -Werror
+QMAKE_CFLAGS += -Wall -Wextra -Werror
 
 # gcov
 QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage
