@@ -19,7 +19,7 @@ QVector<int> newGame()
     /* Генерация судоку - рандомный вызов 5 функций */
     srand(time(NULL)); // для функции rand()
     int func;
-    int count = rand()%1000 + 1;
+    int count = 500+rand()%500 + 1;
     for(int i = 0; i < count; i++){
         func = rand()%5 + 1;
         switch(func){
