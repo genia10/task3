@@ -44,7 +44,7 @@ Values findPossibleValues( int rowIndex, int columnIndex, const Puzzle& puzzle )
                 i--;
                 break;
             }
-	i++
+	i++;
 	}
 
     return values;
