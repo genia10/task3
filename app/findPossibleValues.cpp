@@ -12,32 +12,40 @@ Values findPossibleValues( int rowIndex, int columnIndex, const Puzzle& puzzle )
 
     /* Убираем то, что встречается в строке */
     values1 = getRowValues( rowIndex, puzzle );
-    for(int i=0; i<values.count();i++)
+    int i=0;
+    while(i<values.count()){
         for(int k=0;k<values1.count();k++)
             if(values[i] == values1[k]){
                 values.removeAt(i);
                 i--;
                 break;
             }
+	i++;
+	}
     /* Убираем то, что встречается в столбце */
     values1 = getColumnValues( columnIndex, puzzle );
-    for(int i=0; i<values.count(); i++)
+    i=0;
+    while(i<values.count()){
         for(int k=0;k<values1.count(); k++)
             if(values[i] == values1[k]){
                 values.removeAt(i);
                 i--;
                 break;
             }
+	i++;
+	}
 
     /* Убираем то, что встречается в блоке(квадрате 3 х 3) */
     values1 = getBlockValues( rowIndex, columnIndex, puzzle );
-    for(int i=0; i<values.count();i++)
+    while(i<values.count()){
         for(int k=0;k<values1.count();k++)
             if(values[i] == values1[k]){
                 values.removeAt(i);
                 i--;
                 break;
             }
+	i++
+	}
 
     return values;
 }
